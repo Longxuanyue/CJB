@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>集成战略：燃梦行动</title>
+    <style>
+        .selectiontable {
+            width: 99%;
+            overflow-x: auto;
+            position: relative;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        #selection-table {
+            width: 2500px;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+
+        #selection-table th,
+        #selection-table td {
+            border: 1px solid #000;
+            padding: 5px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        #selection-table tbody td {
+            white-space: nowrap;
+        }
+
+        .selectable {
+            cursor: pointer;
+        }
+
+        .selected {
+            background-color: #076f92;
+            color: #fff;
+        }
+
+        #selected-description {
+            margin: 10px 0;
+            padding: 5px;
+            border: 1px solid #000;
+            min-height: 300px;
+            background-color: rgba(255, 198, 198, 0.25);
+        }
+
+        .disabled {
+            background-color: #ccc;
+            text-decoration: line-through;
+            color: #000;
+        }
+
+        /* 表格头部的样式 */
+        #selection-table th {
+            background-color: #ff0000;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: grey;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: blueviolet;
+        }
+
+        .bottom-image {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0.3;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="https://longxuanyue.github.io/chongjiaobei/第三届重交杯">当期赛事主页</a></li>
+        <li><a class="active" href="https://longxuanyue.github.io/chongjiaobei/合约表">合约表</a></li>
+        <li><a href="https://longxuanyue.github.io/chongjiaobei/赛事规则">赛事规则</a></li>
+        <li><a href="https://longxuanyue.github.io/chongjiaobei/排行榜3">排行榜</a></li>
+        <li style="float:right"><a href="https://longxuanyue.github.io/chongjiaobei/">返回</a></li>
+    </ul>
+
+    <div class="selectiontable">
+        <img class="bottom-image" src="https://raw.githubusercontent.com/Longxuanyue/chongjiaobei/main/bkg7.png" alt="" width="100%">
+        <h1>燃梦行动合约表</h1>
+        <table id="selection-table">
+            <tr>
+                <th>Ⅰ</th>
+                <td class="selectable" data-description="叙事·思绪同步Ⅰ" style="font-weight: bold; text-decoration: underline; color: red;">叙事·思绪同步Ⅰ</td>
+                <td class="selectable" data-description="历史·复述" style="font-weight: bold; text-decoration: underline; color: red;">历史·复述</td>
+                <td class="selectable" data-description="笔墨Ⅰ">笔墨Ⅰ</td>
+                <td class="selectable" data-description="歌谣Ⅰ">歌谣Ⅰ</td>
+                <td class="selectable" data-description="脚注Ⅰ">脚注Ⅰ</td>
+                <td class="selectable" data-description=""></td>
+                <td class="selectable" data-description="引言·空白" style="font-weight: bold; text-decoration: underline; color: red;">引言·空白</td>
+                <td class="selectable" data-description="言语·近似" style="font-weight: bold; text-decoration: underline; color: red;"言语·近似</td>
+                <td class="selectable" data-description="言语·直观" style="font-weight: bold; text-decoration: underline; color: red;">言语·直观</td>
+                <td class="selectable" data-description="言语·空泛" style="font-weight: bold; text-decoration: underline; color: red;">言语·空泛</td>
+                <td class="selectable" data-description="叙事·简约Ⅰ">叙事·简约Ⅰ</td>
+                <td class="selectable" data-description="叙事·精炼Ⅰ">叙事·精炼Ⅰ</td>
+                <td class="selectable" data-description="叙述诡计·旁白欺骗Ⅰ" style="font-weight: bold; text-decoration: underline; color: red;">叙述诡计·旁白欺骗Ⅰ</td>
+                <td class="selectable" data-description="叙述诡计·时序悖论Ⅰ" style="font-weight: bold; text-decoration: underline; color: red;">叙述诡计·时序悖论Ⅰ</td>
+                <td class="selectable" data-description="叙述诡计·片段遗漏Ⅰ">叙述诡计·片段遗漏Ⅰ</td>
+                <td class="selectable" data-description="修辞·飞白Ⅰ">修辞·飞白Ⅰ</td>
+                <td class="selectable" data-description=""></td>
+                <td class="selectable" data-description=""></td>
+                <td class="selectable" data-description="行文·无意义构筑Ⅰ">行文·无意义构筑Ⅰ</td>
+                <td class="selectable" data-description=""></td>
+                <td class="selectable" data-description=""></td>
+            </tr>
+            <tr>
+                <th>Ⅱ</th>
+                <td class="selectable" data-description="叙事·思绪同步Ⅱ" style="font-weight: bold; text-decoration: underline; color: red;">叙事·思绪同步Ⅱ</td>
+                <td class="selectable" data-description="历史·反演" style="font-weight: bold; text-decoration: underline; color: red;">历史·反演</td>
+                <td class="selectable" data-description="笔墨Ⅱ">笔墨Ⅱ</td>
+                <td class="selectable" data-description="歌谣Ⅱ">歌谣Ⅱ</td>
+                <td class="selectable" data-description="脚注Ⅱ">脚注Ⅱ</td>
+                <td class="selectable" data-description="史料·绝句" style="font-weight: bold; text-decoration: underline; color: red;">史料·绝句</td>
+                <td class="selectable" data-description="叙事陷阱·主观臆断">叙事陷阱·主观臆断</td>
+                <td class="selectable" data-description="叙事陷阱·单一塑造">叙事陷阱·单一塑造</td>
+                <td class="selectable" data-description="叙事陷阱·无用信息">叙事陷阱·无用信息</td>
+                <td class="selectable" data-description="叙事陷阱·过度强调">叙事陷阱·过度强调</td>
+                <td class="selectable" data-description="叙事·简约Ⅱ">叙事·简约Ⅱ</td>
+                <td class="selectable" data-description="叙事·精炼Ⅱ">叙事·精炼Ⅱ</td>
+                <td class="selectable" data-description="叙述诡计·旁白欺骗Ⅱ" style="font-weight: bold; text-decoration: underline; color: red;">叙述诡计·旁白欺骗Ⅱ</td>
+                <td class="selectable" data-description="叙述诡计·时序悖论Ⅱ" style="font-weight: bold; text-decoration: underline; color: red;">叙述诡计·时序悖论Ⅱ</td>
+                <td class="selectable" data-description="叙述诡计·片段遗漏Ⅱ">叙述诡计·片段遗漏Ⅱ</td>
+                <td class="selectable" data-description="修辞·飞白Ⅱ">修辞·飞白Ⅱ</td>
+                <td class="selectable" data-description="叙事条理·灵光一现">叙事条理·灵光一现</td>
+                <td class="selectable" data-description="叙事条理·本格推理">叙事条理·本格推理</td>
+                <td class="selectable" data-description="行文·无意义构筑Ⅱ">行文·无意义构筑Ⅱ</td>
+                <td class="selectable" data-description="行文·分散性叙述">行文·分散性叙述</td>
+                <td class="selectable" data-description="行文·混沌性言语">行文·混沌性言语</td>
+            </tr>
+            <tr>
+                <th>Ⅲ</th>
+                <td class="selectable" data-description=""></td>
+                <td class="selectable" data-description="历史·颠覆" style="font-weight: bold; text-decoration: underline; color: red;">历史·颠覆</td>
+                <td class="selectable" data-description="笔墨Ⅲ">笔墨Ⅲ</td>
+                <td class="selectable" data-description="歌谣Ⅲ">歌谣Ⅲ</td>
+                <td class="selectable" data-description="脚注Ⅲ">脚注Ⅲ</td>
+                <td class="selectable" data-description=""></td>
+                <td class="selectable" data-description=""></td>
+                <td class="selectable" data-description=""></td>
+                <td class="selectable" data-description=""></td>
+                <td class="selectable" data-description=""></td>
+                <td class="selectable" data-description="叙事·简约Ⅲ">叙事·简约Ⅲ</td>
+                <td class="selectable" data-description="叙事·精炼Ⅲ">叙事·精炼Ⅲ</td>
+                <td class="selectable" data-description="叙述诡计·旁白欺骗Ⅲ" style="font-weight: bold; text-decoration: underline; color: red;">叙述诡计·旁白欺骗Ⅲ</td>
+                <td class="selectable" data-description=""></td>
+                <td class="selectable" data-description=""></td>
+                <td class="selectable" data-description="修辞·飞白Ⅲ">修辞·飞白Ⅲ</td>
+                <td class="selectable" data-description=""></td>
+                <td class="selectable" data-description=""></td>
+                <td class="selectable" data-description="行文·无意义构筑Ⅲ">行文·无意义构筑Ⅲ</td>
+                <td class="selectable" data-description=""></td>
+                <td class="selectable" data-description=""></td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <button id="clear-button" style="margin-bottom: 10px;">清空</button>
+    </div>
+    <div>
+        <p>注：红色加粗下划线词条为团队词条，其余为个人词条</p>
+    </div>
+    <div id="total-level">
+        当前合约等级：<span id="level-count">0</span>
+    </div>
+    <div id="selected-description"></div>
+
+    <script>
+        const table = document.getElementById('selection-table');// 表格
+        const descriptionDiv = document.getElementById('selected-description');// 描述
+        const levelCountSpan = document.getElementById('level-count');// 合约等级
+        let levelCount = 0;// 合约等级
+
+        // 标签组，每组中只能选一个
+        const tagGroups = [
+            ["叙事·思绪同步Ⅰ", "叙事·思绪同步Ⅱ"],
+            ["笔墨Ⅰ", "笔墨Ⅱ", "笔墨Ⅲ", "歌谣Ⅰ", "歌谣Ⅱ", "歌谣Ⅲ"],
+            ["脚注Ⅰ", "脚注Ⅱ", "脚注Ⅲ"],
+            ["历史·复述", "历史·反演", "历史·颠覆"],
+            ["言语·近似", "言语·直观", "言语·空泛"],
+            ["修辞·飞白Ⅰ", "修辞·飞白Ⅱ", "修辞·飞白Ⅲ"],
+            ["叙述诡计·旁白欺骗Ⅰ", "叙述诡计·旁白欺骗Ⅱ", "叙述诡计·旁白欺骗Ⅲ"],
+            ["叙述诡计·片段遗漏Ⅰ", "叙述诡计·片段遗漏Ⅱ"],
+            ["叙述诡计·时序悖论Ⅰ", "叙述诡计·时序悖论Ⅱ"],
+            ["叙事·简约Ⅰ", "叙事·简约Ⅱ", "叙事·简约Ⅲ", "叙事·精炼Ⅰ", "叙事·精炼Ⅱ", "叙事·精炼Ⅲ"],
+            ["行文·无意义构筑Ⅰ", "行文·无意义构筑Ⅱ", "行文·无意义构筑Ⅲ"],
+            ["叙事条理·灵光一现", "叙事条理·本格推理"]
+        ];
+
+        // 定义单元格等级映射关系
+        const tagLevels = {
+            "叙事·思绪同步Ⅰ": 1,
+            "叙事·思绪同步Ⅱ": 2,
+            "历史·复述": 1,
+            "历史·反演": 2,
+            "历史·颠覆": 3,
+            "笔墨Ⅰ": 1,
+            "笔墨Ⅱ": 2,
+            "笔墨Ⅲ": 3,
+            "歌谣Ⅰ": 1,
+            "歌谣Ⅱ": 2,
+            "歌谣Ⅲ": 3,
+            "脚注Ⅰ": 1,
+            "脚注Ⅱ": 2,
+            "脚注Ⅲ": 3,
+            "史料·绝句": 2,
+            "言语·近似": 1,
+            "言语·直观": 1,
+            "言语·空泛": 1,
+            "叙事·简约Ⅰ": 1,
+            "叙事·简约Ⅱ": 2,
+            "叙事·简约Ⅲ": 3,
+            "叙事·精炼Ⅰ": 1,
+            "叙事·精炼Ⅱ": 2,
+            "叙事·精炼Ⅲ": 3,
+            "引言·空白": 1,
+            "叙事陷阱·单一塑造": 2,
+            "叙事陷阱·无用信息": 2,
+            "叙事陷阱·主观臆断": 2,
+            "叙事陷阱·过度强调": 2,
+            "叙述诡计·旁白欺骗Ⅰ": 1,
+            "叙述诡计·旁白欺骗Ⅱ": 2,
+            "叙述诡计·旁白欺骗Ⅲ": 3,
+            "叙述诡计·片段遗漏Ⅰ": 1,
+            "叙述诡计·片段遗漏Ⅱ": 2,
+            "叙述诡计·时序悖论Ⅰ": 1,
+            "叙述诡计·时序悖论Ⅱ": 2,
+            "修辞·夸张": 2,
+            "修辞·飞白Ⅰ": 1,
+            "修辞·飞白Ⅱ": 2,
+            "修辞·飞白Ⅲ": 3,
+            "叙事条理·灵光一现": 2,
+            "叙事条理·本格推理": 2,
+            "行文·无意义构筑Ⅰ": 1,
+            "行文·无意义构筑Ⅱ": 2,
+            "行文·无意义构筑Ⅲ": 3,
+            "行文·分散性叙述": 2,
+            "行文·混沌性言语": 2
+        };
+
+        // 用于保存当前所选标签
+        let selectedTags = {
+            "叙事·思绪同步Ⅰ": false,
+            "叙事·思绪同步Ⅱ": false,
+            "历史·复述": false,
+            "历史·反演": false,
+            "历史·颠覆": false,
+            "笔墨Ⅰ": false,
+            "笔墨Ⅱ": false,
+            "笔墨Ⅲ": false,
+            "歌谣Ⅰ": false,
+            "歌谣Ⅱ": false,
+            "歌谣Ⅲ": false,
+            "脚注Ⅰ": false,
+            "脚注Ⅱ": false,
+            "脚注Ⅲ": false,
+            "史料·绝句": false,
+            "言语·近似": false,
+            "言语·直观": false,
+            "言语·空泛": false,
+            "叙事·简约Ⅰ": false,
+            "叙事·简约Ⅱ": false,
+            "叙事·简约Ⅲ": false,
+            "叙事·精炼Ⅰ": false,
+            "叙事·精炼Ⅱ": false,
+            "叙事·精炼Ⅲ": false,
+            "引言·空白": false,
+            "叙事陷阱·单一塑造": false,
+            "叙事陷阱·无用信息": false,
+            "叙事陷阱·主观臆断": false,
+            "叙事陷阱·过度强调": false,
+            "叙述诡计·旁白欺骗Ⅰ": false,
+            "叙述诡计·旁白欺骗Ⅱ": false,
+            "叙述诡计·旁白欺骗Ⅲ": false,
+            "叙述诡计·片段遗漏Ⅰ": false,
+            "叙述诡计·片段遗漏Ⅱ": false,
+            "叙述诡计·时序悖论Ⅰ": false,
+            "叙述诡计·时序悖论Ⅱ": false,
+            "修辞·夸张": false,
+            "修辞·飞白Ⅰ": false,
+            "修辞·飞白Ⅱ": false,
+            "修辞·飞白Ⅲ": false,
+            "叙事条理·灵光一现": false,
+            "叙事条理·本格推理": false,
+            "行文·无意义构筑Ⅰ": false,
+            "行文·无意义构筑Ⅱ": false,
+            "行文·无意义构筑Ⅲ": false,
+            "行文·分散性叙述": false,
+            "行文·混沌性言语": false
+        };
+        //每个标签的描述
+        const tagDescriptions = {
+            "叙事·思绪同步Ⅰ": "小队联络次数-2",
+            "叙事·思绪同步Ⅱ": "小队联络次数-4",
+            "历史·复述": "指定通关等级为10",
+            "历史·反演": "指定通关等级为12，总得分提升至原来的1.2倍",
+            "历史·颠覆": "指定通关等级为15，总得分提升至原来的1.5倍",
+            "笔墨Ⅰ": "编入队伍中六星及以上近卫、辅助、狙击、医疗干员总数不得超过6名（不包含临时招募）",
+            "笔墨Ⅱ": "编入队伍中六星及以上近卫、辅助、狙击、医疗干员总数不得超过5名（不包含临时招募）",
+            "笔墨Ⅲ": "编入队伍中六星及以上近卫、辅助、狙击、医疗干员总数不得超过4名（不包含临时招募）",
+            "歌谣Ⅰ": "编入队伍中六星及以上先锋、重装、特种、术士干员总数不得超过6名（不包含临时招募）",
+            "歌谣Ⅱ": "编入队伍中六星及以上先锋、重装、特种、术士干员总数不得超过5名（不包含临时招募）",
+            "歌谣Ⅲ": "编入队伍中六星及以上先锋、重装、特种、术士干员总数不得超过4名（不包含临时招募）",
+            "脚注Ⅰ": "临时招募干员数不可超过4名，且临时招募六星干员数不超过2，但总得分额外 + 50 分",
+            "脚注Ⅱ": "临时招募干员数不可超过3名，且临时招募六星干员数不超过1，但总得分额外 + 150 分",
+            "脚注Ⅲ": "临时招募干员数不可超过2名，且不可招募临时6星干员，但总得分额外 + 250 分",
+            "史料·绝句": "除bingo板上的干员以外，团队总招募六星干员种类不可超过15",
+            "言语·近似": "三人必须选择同一初始分队（除蓝图测绘分队），且必须选择随心所欲牌组开局",
+            "言语·直观": "仅可选择突击战术、堡垒战术、远程战术、破坏战术、高规格，且每名选手不可选择相同分队",
+            "言语·空泛": "仅可选择指挥、集群、矛头、后勤、魂灵护送、蓝图测绘、博闻广记、因地制宜分队，且每名选手不可选择相同分队",
+            "叙事·简约Ⅰ": "编入队伍的六星干员数不得超过10人",
+            "叙事·简约Ⅱ": "编入队伍的六星干员数不得超过8人",
+            "叙事·简约Ⅲ": "编入队伍的六星干员数不得超过6人",
+            "叙事·精炼Ⅰ": "战斗进行中最多可同时部署人数为9",
+            "叙事·精炼Ⅱ": "战斗进行中最多可同时部署人数为7",
+            "叙事·精炼Ⅲ": "战斗进行中最多可同时部署人数为5",
+            "引言·空白": "不得抓取开局增益",
+            "叙事陷阱·单一塑造": "先行一步节点中派遣干员次数不超过2",
+            "叙事陷阱·无用信息": "失与得节点中，换取收藏品的次数不超过2",
+            "叙事陷阱·主观臆断": "除去因【“拱门”与“呼救”】、【先知长角】、【变换之城】触发的诡谲断章外，进入诡谲断章次数不超过2",
+            "叙事陷阱·过度强调": "一次探索中，必须至少进入一次狭路相逢节点并胜利",
+            "叙述诡计·旁白欺骗Ⅰ": "团队可取源石锭数额减少30 %",
+            "叙述诡计·旁白欺骗Ⅱ": "团队可取源石锭数额减少45 %，且不可补充金额",
+            "叙述诡计·旁白欺骗Ⅲ": "团队可取源石锭数额减少60 %，且不可补充金额",
+            "叙述诡计·片段遗漏Ⅰ": "每个商店中可花费源石锭购买次数最多为6",
+            "叙述诡计·片段遗漏Ⅱ": "每个商店中可花费源石锭购买次数最多为4",
+            "叙述诡计·时序悖论Ⅰ": "团队可攻打坎诺特的次数为2",
+            "叙述诡计·时序悖论Ⅱ": "团队可攻打坎诺特的次数为1",
+            "修辞·夸张": "团队总招募的非临招六星干员种类不可超过20",
+            "修辞·飞白Ⅰ": "本次探索中，至多5次战斗可以扣除生命值，每超出1次扣70分。每剩余一次加10分。未用完的次数不可继承。",
+            "修辞·飞白Ⅱ": "本次探索中，至多4次战斗可以扣除生命值，每超出1次扣70分。每剩余一次加20分。未用完的次数不可继承。",
+            "修辞·飞白Ⅲ": "本次探索中，至多3次战斗可以扣除生命值，每超出1次扣70分。每剩余一次加30分。未用完的次数不可继承。",
+            "叙事条理·灵光一现": "除前两层外，每层探索结束时，必须持有至少两缕灵感",
+            "叙事条理·本格推理": "除前两层外，每层探索结束时，必须持有至少两缕遗愿",
+            "行文·无意义构筑Ⅰ": "禁止在作战中生效稀有度4级的灵感",
+            "行文·无意义构筑Ⅱ": "禁止在作战中生效稀有度3级及以上的灵感",
+            "行文·无意义构筑Ⅲ": "除险路恶敌节点外，禁止在作战中生效稀有度2级及以上的灵感",
+            "行文·分散性叙述": "除前两层外，每层探险结束时，手中的构想数不超过6",
+            "行文·混沌性言语": "在去伪存真节点中，必须使用两缕相同类型的思绪进行组合"
+        }
+        const clearButton = document.getElementById('clear-button');
+        clearButton.addEventListener('click', function () {
+            // 重置所有已选择的标签
+            for (const tag in selectedTags) {
+                selectedTags[tag] = false;
+            }
+
+            // 更新单元格样式、描述和等级数
+            updateCellStyles();
+            descriptionDiv.innerHTML = '';
+            levelCountSpan.textContent = 0;
+        });
+        function formatSelectedTagDescription(tag) {
+            if (tagLevels[tag] == 1) {
+                newtagLevels = "Ⅰ"
+            }
+            else if (tagLevels[tag] == 2) {
+                newtagLevels = "Ⅱ"
+            }
+            else if (tagLevels[tag] == 3) {
+                newtagLevels = "Ⅲ"
+            }
+            return `(${newtagLevels})${tag}： ${tagDescriptions[tag]}`;
+        }
+
+        // 更新描述和等级数
+        function updateDescriptionAndLevel() {
+            descriptionDiv.innerHTML = ''; // 清空描述
+            levelCount = 0; // 重置等级数
+
+            for (const tag in selectedTags) {
+                if (selectedTags[tag]) { // 如果标签被选择
+                    // 使用tagLevels映射关系获取等级
+                    const level = tagLevels[tag] || (tag.includes("Ⅰ") ? 1 : (tag.includes("Ⅱ") ? 2 : (tag.includes("Ⅲ") ? 3 : 0)));
+                    levelCount += level;
+                    // 更新描述
+                    if (tagDescriptions[tag]) {
+                        const description = document.createElement('p');
+                        const formattedDescription = formatSelectedTagDescription(tag);
+                        description.textContent = formattedDescription;
+                        descriptionDiv.appendChild(description);
+                    }
+                }
+            }
+            levelCountSpan.textContent = levelCount; // 显示总等级数
+        }
+
+        function updateCellStyles() {
+            Array.from(table.getElementsByClassName('selectable')).forEach(cell => {
+                const cellTag = cell.dataset.description;
+
+                // 首先移除所有状态样式
+                cell.classList.remove('selected', 'disabled');
+
+                // 应用选中样式
+                if (selectedTags[cellTag]) {
+                    cell.classList.add('selected');
+                }
+
+                // 应用禁用样式
+                tagGroups.forEach(group => {
+                    if (group.includes(cellTag) && group.some(tag => selectedTags[tag])) {
+                        if (!selectedTags[cellTag]) {
+                            cell.classList.add('disabled');
+                        }
+                    }
+                });
+            });
+        }
+
+        // 点击单元格的处理函数
+        table.addEventListener('click', function (event) {
+            const cell = event.target;
+            if (cell.classList.contains('selectable')) {
+                const cellTag = cell.dataset.description;
+
+                // 判断单元格状态
+                if (!selectedTags[cellTag] && !cell.classList.contains('disabled')) { // 未被选择且没有被连锁禁用
+                    selectedTags[cellTag] = true; // 标记为已选择
+                    cell.classList.add('selected'); // 更新单元格样式为已选择
+
+                    // 将同组单元格更改为连锁禁用样式
+                    tagGroups.forEach(group => {
+                        if (group.includes(cellTag)) {
+                            group.forEach(tag => {
+                                if (tag !== cellTag) {
+                                    selectedTags[tag] = false; // 取消同组其他单元格的选择
+                                    const tagCell = document.querySelector(`[data-description="${tag}"]`);
+                                    if (tagCell) {
+                                        tagCell.classList.add('disabled');
+                                    }
+                                }
+                            });
+                        }
+                    });
+                } else if (selectedTags[cellTag]) { // 已选择
+                    selectedTags[cellTag] = false; // 取消选择
+                    cell.classList.remove('selected', 'disabled'); // 更新单元格样式为未选择且无禁用
+
+                    // 将同组单元格更改为未被选择且没有被连锁禁用样式
+                    tagGroups.forEach(group => {
+                        if (group.includes(cellTag)) {
+                            group.forEach(tag => {
+                                if (tag !== cellTag) {
+                                    const tagCell = document.querySelector(`[data-description="${tag}"]`);
+                                    if (tagCell) {
+                                        tagCell.classList.remove('disabled');
+                                    }
+                                }
+                            });
+                        }
+                    });
+                    descriptionDiv.innerHTML = '';
+                } else if (cell.classList.contains('disabled')) { // 连锁禁用状态
+                    selectedTags[cellTag] = true; // 将该单元格更改为已选中状态
+                    cell.classList.remove('disabled', 'selected'); // 移除禁用样式，添加已选中样式
+
+                    // 将同组单元格更改为连锁禁用样式
+                    tagGroups.forEach(group => {
+                        if (group.includes(cellTag)) {
+                            group.forEach(tag => {
+                                if (tag !== cellTag) {
+                                    selectedTags[tag] = false; // 取消同组其他单元格的选择
+                                    const tagCell = document.querySelector(`[data-description="${tag}"]`);
+                                    if (tagCell) {
+                                        tagCell.classList.add('disabled');
+                                    }
+                                }
+                            });
+                        }
+                    });
+                }
+
+                updateCellStyles();
+                updateDescriptionAndLevel();
+            }
+        });
+        updateCellStyles();
+
+    </script>
+
+</body>
+
+</html>

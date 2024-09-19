@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>集成战略：燃梦行动</title>
+    <style>
+        .selectiontable {
+            width: 99%;
+            overflow-x: auto;
+            position: relative;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        #selection-table {
+            width: 2500px;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+
+        #selection-table th,
+        #selection-table td {
+            border: 1px solid #000;
+            padding: 5px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        #selection-table tbody td {
+            white-space: nowrap;
+        }
+
+        .selectable {
+            cursor: pointer;
+        }
+
+        .selected {
+            background-color: #076f92;
+            color: #fff;
+        }
+
+        #selected-description {
+            margin: 10px 0;
+            padding: 5px;
+            border: 1px solid #000;
+            min-height: 300px;
+            background-color: rgba(255, 198, 198, 0.25);
+        }
+
+        .disabled {
+            background-color: #ccc;
+            text-decoration: line-through;
+            color: #000;
+        }
+
+        /* 表格头部的样式 */
+        #selection-table th {
+            background-color: #ff0000;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: grey;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: blueviolet;
+        }
+
+        .bottom-image {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0.3;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="https://longxuanyue.github.io/chongjiaobei/第三届重交杯">当期赛事主页</a></li>
+        <li><a href="https://longxuanyue.github.io/chongjiaobei/合约表">合约表</a></li>
+        <li><a class="active" href="https://longxuanyue.github.io/chongjiaobei/赛事规则">赛事规则</a></li>
+        <li><a href="https://longxuanyue.github.io/chongjiaobei/排行榜3">排行榜</a></li>
+        <li style="float:right"><a href="https://longxuanyue.github.io/chongjiaobei/">返回</a></li>
+    </ul>
+
+    <div class="selectiontable">
+        <img class="bottom-image" src="https://raw.githubusercontent.com/Longxuanyue/chongjiaobei/main/bkg7.png" alt=""
+            width="100%">
+        <h1>赛事附加文件</h1>
+        <a href="https://github.com/Longxuanyue/chongjiaobei/raw/main/申诉材料.docx" download>
+            附件一：申诉材料
+        </a>
+        <p></p>
+        <a href="https://github.com/Longxuanyue/chongjiaobei/raw/main/计算器.xlsx" download>
+            附件二：得分计算器
+        </a>
+        <h1>赛事规则</h1>
+        <p>一：本次比赛形式为三人合作赛，三人合作赛中，选手须在队长的指挥与判断下完成探索。地图选择为萨卡兹的无终奇语。</p>
+        <p>二：三人合作赛每支队伍取钱总额不得超过120，取钱额度共享。路线、结局不作限制，选手可自由选择路线。<br>取钱计算方式：仅统计选手进入前与进入后的源石锭差值。</p>
+        <p>三：本次赛事中，每个违反tag规定的操作罚分300分。若累计违反的tag超过两条，则个人分数清零。词条内已包含惩罚的不视为违反tag规定。团队tag的违反，视作当前选手个人成绩清零，且全队记作一次违规。团队违规累计两次后团队成绩清零。
+        </p>
+        <p>四：本次比赛中，选手应从分队选择界面向主办方开始直播，不允许提前开局，开局增益抓取应符合合约词条限制。<br>在进入第三层险路恶敌节点前，选手有一次重新开局的机会。需提前向主办方通知并获得许可，不允许私自退出进行结算。违者单人成绩视为0。<br>在进入第三层险路恶敌前失败的选手，可继续进行第二次探索。本次探索规则不变。最终成绩取两次探索的最高成绩。<br>原则上不禁止两次选择不同队伍，但应符合选择合约词条要求。
+        </p>
+        <p style="color: #ff0000;"><i><u>备注：在“拥挤年代”下，遭遇“卫士不语功”“奉献”关卡时，可无条件进行重开。</u></i></p>
+        <p>五：每个团队共有6次战术交流机会，可与团队成员进行实时联络沟通。交流前，需提前向主办方申请，并在主办方指定的平台中进行交流，交流过程必须实时公开。每次时限3分钟。在沟通过程中，选手可同时进行探索。进行联络时，应先由主办方向正在比赛的选手发出联络通知。选手应暂停目前正在进行的探索直到联络开始，联络正在进行时，选手可继续探索。主办方应在剩余1分钟时告知剩余时间。当超过规定时间且未结束联络时，应视为再次消耗一次联络次数。当次数不足时，视为一次违规。
+            <br>队长负责对本队三名选手的出场顺序进行安排，并提前上报给主办方。如需临时更换，应提前向主办方说明情况并及时安排替换选手出场。
+        </p>
+        <p>六：<br>合约词条：由队长为团队所有成员选择词条，不同词条拥有不同的难度等级。队伍中每名选手须在相同词条限制下完成本次挑战。选择的词条应提前上报给主办方。上报后仅允许更改一次。在第一位队员开始探索后，不允许修改选择的词条。本次规则下，团队赛（有特殊标注）词条总等级不低于10，选手个人词条总等级不低于10。
+            <br><br>干员Bingo板：本次比赛中，每支队伍会获得一张干员Bingo卡，选手在探索进行时，可通过招募Bingo板上的干员以填涂Bingo板（仅需招募即可）。当横向，纵向，斜向格全部填涂完毕时，称为一次Bingo。每达成一次Bingo，即会有额外得分奖励。每支队伍中未划于Bingo板上的六星干员仅可抓取一次，后续不可在其他队员中出现。Bingo板上的干员没有次数限制。（临时招募除外）不同选手间，Bingo板进度继承。当全队的总Bingo数低于5时，视为一次违规。
+            <br>
+        <p>Bingo板预览效果如下：</p>
+        <img src="https://raw.githubusercontent.com/Longxuanyue/chongjiaobei/main/Bingo板.png" alt="Bingo板" width="400px"
+            length="400px">
+        </p>
+        <p>七：特殊得分请参照文件“计算器.xlsx”</p>
+        <p>八：得分计算方式<br>合约词条得分为：合约等级*50<br>
+            Bingo板得分为：划去干员数*50+Bingo数*100<br>
+            每名选手最终得分 = 难度系数*（局内得分 * 50% + 特殊得分 + 合约得分 – 罚分）<br>
+            团队赛最终得分 = 三名选手最终得分相加 + bingo得分 * 难度系数
+        </p>
+        <p>九：选手需保持与裁判任意一方的联络。如因不可抗力因素需暂时离开探索，须向主办方提出申请。如因个人原因结束探索，不给予重赛机会。若因官方原因结束探索，主办方应给予重赛机会。
+            <br><br>主办方拥有对规则的最终解释权。当出现未写明于规则书上的违规行为时，主办方可以在经过商议后做出裁定。对判决结果有异议的选手应在24小时内从重交杯官网下载申诉材料，按照模板进行提交申诉。主办方根据选手意见再次商议，并于24h内再次做出判决。本次判决即为最终判决。
+            <br><br>因选手操作原因导致局内结算数据异常，默认该名选手成绩为0。包括但不限于：未展示最终干员数、藏品数、思绪数；未展示局内得分等。
+        </p>
+        <p>十：队伍排名
+            <br>本次比赛中，首轮每支参赛队伍抽签决定比赛顺序，每支队伍首先派出一人进行探索。以探索成绩的高低排序依次获得积分（最低为0分）并逆向决定下一轮的探索顺序。
+            <br>积分获取规则如下
+            <br>每一轮中：
+            <br>第一名：+8分
+            <br>第二名：+6分
+            <br>第三名：+5分
+            <br>第四名：+4分
+            <br>第五名：+3分
+            <br>第六名：+2分
+            <br>第七名：+0分
+            <br>三轮探索全部结束后，团队赛最终得分前三的队伍，可分别获得+5分，+3分，+1分。
+            <br>三轮探索结束后，以总合计积分作为最终排名，发放奖励。
+        </p>
+</body>
+
+</html>

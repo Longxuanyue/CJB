@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>重交杯官网</title>
+
+<head>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: grey;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: blueviolet;
+        }
+
+        .bottom-image {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a class="active" href="https://longxuanyue.github.io/chongjiaobei/第三届重交杯">当期赛事主页</a></li>
+        <li><a href="https://longxuanyue.github.io/chongjiaobei/合约表">合约表</a></li>
+        <li><a href="https://longxuanyue.github.io/chongjiaobei/赛事规则">赛事规则</a></li>
+        <li><a href="https://longxuanyue.github.io/chongjiaobei/排行榜3">排行榜</a></li>
+        <li style="float:right"><a href="https://longxuanyue.github.io/chongjiaobei/">返回</a></li>
+    </ul>
+    <main>
+        <div style="padding:20px;margin-top:30px;">
+            <img class="bottom-image" src="https://raw.githubusercontent.com/Longxuanyue/chongjiaobei/main/bkg7.png"
+                alt="" width="100%">
+        </div>
+        <h1>赛事组公告</h1>
+        <div id="announcement1" class="announcement-content">
+            <p>重交杯#3：燃梦行动赛事组通讯#3</p>
+            <br>
+            <p>1）更新部分页面的语言表述错误</p>
+            <p>2）合约词条得分提升 （25分/级->50分/级）</p>
+            <p>3）Bingo得分提升 （20分/划去干员->50分/划去干员；50分/次->100分/次）</p>
+            <p>4）对部分规则进行补充阐释，变更内容如下：</p>
+            <p>Ⅰ:删除超额取钱的罚分，更改为团队违规</p>
+            <p>Ⅱ:优化词条等级下限限制：合约等级不得低于18 -> 团队词条不得低于10，个人词条不得低于8</p>
+            <p>Ⅲ:新增重开规则：在“拥挤年代”下，遭遇“卫士不语功”“奉献”关卡时，可无条件进行重开。</p>
+            <p>Ⅳ:新增得分项：卫士不语功/奉献（拥挤年代）&emsp;&emsp;200分</p>
+            <p>Ⅴ:优化积分赋分规则</p>
+            <p>5）部分合约词条更新，优化团队词条显示</p>
+            <br>
+            <p>2024年9月19日</p>
+            <p>重交杯赛事组</p>
+        </div>
+        <button onclick="redirectToNewPage()">返回</button>
+        <script>
+            function redirectToNewPage() {
+                window.location.href = 'https://longxuanyue.github.io/chongjiaobei/%E7%AC%AC%E4%B8%89%E5%B1%8A%E9%87%8D%E4%BA%A4%E6%9D%AF'; // 将此URL替换为您要跳转的新页面的URL
+            }
+        </script>
+    </main>
+</body>
+
+</html>

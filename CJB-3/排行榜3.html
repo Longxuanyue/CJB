@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>重交杯官网</title>
+
+<head>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: grey;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: blueviolet;
+        }
+
+        th {
+            text-align: center;
+            background-color: blueviolet;
+            color: white;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            /* 合并单元格边框 */
+        }
+
+        th,
+        td {
+            border: 1px solid #00CCCC;
+            text-align: center;
+        }
+
+        #ddd td {
+            background-color: #cc00a3;
+            color: white;
+        }
+
+        .bottom-image {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0.3;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="https://longxuanyue.github.io/chongjiaobei/第三届重交杯">当期赛事主页</a></li>
+        <li><a href="https://longxuanyue.github.io/chongjiaobei/合约表">合约表</a></li>
+        <li><a href="https://longxuanyue.github.io/chongjiaobei/赛事规则">赛事规则</a></li>
+        <li><a class="active" href="https://longxuanyue.github.io/chongjiaobei/排行榜3">排行榜</a></li>
+        <li style="float:right"><a href="https://longxuanyue.github.io/chongjiaobei/">返回</a></li>
+    </ul>
+    <main>
+        <div style="padding:20px;margin-top:30px;">
+            <img class="bottom-image" src="https://raw.githubusercontent.com/Longxuanyue/chongjiaobei/main/bkg7.png" alt="" width="100%">
+            <h1>燃梦行动排行榜</h1>
+            <table style="width:100%">
+                <tr>
+                    <th style="width:4%">排名</th>
+                    <th style="text-align: center;width:30%">团队名称</th>
+                    <th style="width:16%">团队成员1</th>
+                    <th style="width:16%">团队成员2</th>
+                    <th style="width:16%">团队成员3</th>
+                    <th style="width:6%">合约等级</th>
+                    <th style="width:6%">通关难度</th>
+                    <th style="width:6%">积分</th>
+                </tr>
+            </table>
+        </div>
+        <div>
+        </div>
+    </main>
+</body>
+
+</html>

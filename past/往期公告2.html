@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>重交杯官网</title>
+
+<head>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: grey;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: blueviolet;
+        }
+
+        .bottom-image {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a class="active" href="https://longxuanyue.github.io/chongjiaobei/第三届重交杯">当期赛事主页</a></li>
+        <li><a href="https://longxuanyue.github.io/chongjiaobei/合约表">合约表</a></li>
+        <li><a href="https://longxuanyue.github.io/chongjiaobei/赛事规则">赛事规则</a></li>
+        <li><a href="https://longxuanyue.github.io/chongjiaobei/排行榜3">排行榜</a></li>
+        <li style="float:right"><a href="https://longxuanyue.github.io/chongjiaobei/">返回</a></li>
+    </ul>
+    <main>
+        <div style="padding:20px;margin-top:30px;">
+            <img class="bottom-image" src="https://raw.githubusercontent.com/Longxuanyue/chongjiaobei/main/bkg7.png"
+                alt="" width="100%">
+        </div>
+        <h1>赛事组公告</h1>
+        <div id="announcement1" class="announcement-content">
+            <p>重交杯#3：燃梦行动赛事组通讯#2</p>
+            <br>
+            <p>截止目前，重交杯#3：燃梦行动报名队伍共计7支，期待本次赛事各位选手能够发挥出自己的最佳水平！<br>
+                本次赛事官方报名渠道正式关闭，若仍有选手想要继续参赛，请找好队友与@主办方：龙月 私下交流<br>
+                各队伍最晚于9月28日晚9：00将自选AB的内容公布给主办方，提交顺序为：<br>
+                自选B左上-自选B右上-自选A-自选B左下-自选B右下 </p>
+            <br>
+            <p>2024年9月15日</p>
+            <p>重交杯赛事组</p>
+        </div>
+        <button onclick="redirectToNewPage()">返回</button>
+        <script>
+            function redirectToNewPage() {
+                window.location.href = 'https://longxuanyue.github.io/chongjiaobei/%E7%AC%AC%E4%B8%89%E5%B1%8A%E9%87%8D%E4%BA%A4%E6%9D%AF'; // 将此URL替换为您要跳转的新页面的URL
+            }
+        </script>
+    </main>
+</body>
+
+</html>
