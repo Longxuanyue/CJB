@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>重交杯官网</title>
+
+<head>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: grey;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: blueviolet;
+        }
+
+        .bottom-image {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a class="active" href="https://longxuanyue.github.io/CJB/CJB-3/第三届重交杯">当期赛事主页</a></li>
+        <li><a href="https://longxuanyue.github.io/CJB/CJB-3/合约表">合约表</a></li>
+        <li><a href="https://longxuanyue.github.io/CJB/CJB-3/赛事规则">赛事规则</a></li>
+        <li><a href="https://longxuanyue.github.io/CJB/CJB-3/排行榜3">排行榜</a></li>
+        <li style="float:right"><a href="https://longxuanyue.github.io/CJB/">返回</a></li>
+    </ul>
+    <main>
+        <div style="padding:20px;margin-top:30px;">
+            <img class="bottom-image" src="https://raw.githubusercontent.com/Longxuanyue/CJB/main/img/bkg7.png"
+                alt="" width="100%">
+        </div>
+        <h1>赛事组公告</h1>
+        <div id="announcement1" class="announcement-content">
+            <p>重交杯#3：燃梦行动赛事组通讯#4</p>
+            <br>
+            <p>积分奖励追加</p>
+            <p>追加规则1：团队赛总分前1/2/3名，分别追加积分总分5/3/1分</p>
+            <p>追加规则2：bingo板全部完成的队伍总分+5分，总bingo数前三的队伍除总分奖励外，总积分额外增加5/3/1分（两者不叠加）</p>
+            <br>
+            <p>2024年10月8日</p>
+            <p>重交杯赛事组</p>
+        </div>
+        <button onclick="redirectToNewPage()">返回</button>
+        <script>
+            function redirectToNewPage() {
+                window.location.href = 'https://longxuanyue.github.io/CJB/CJB-3/%E7%AC%AC%E4%B8%89%E5%B1%8A%E9%87%8D%E4%BA%A4%E6%9D%AF'; // 将此URL替换为您要跳转的新页面的URL
+            }
+        </script>
+    </main>
+</body>
+
+</html>

@@ -88,8 +88,8 @@
     </ul>
     <main>
         <div style="padding:20px;margin-top:30px;">
-            <img class="bottom-image" src="https://raw.githubusercontent.com/Longxuanyue/CJB/main/img/bkg7.png"
-                alt="" width="100%">
+            <img class="bottom-image" src="https://raw.githubusercontent.com/Longxuanyue/CJB/main/img/bkg7.png" alt=""
+                width="100%">
             <h1>赛事最新进展</h1>
             <p>当前阶段：赛事第三轮</p>
             <p>当期主题：危机合约#3：燃梦行动</p>
@@ -103,24 +103,19 @@
             <button class="tablink" onclick="openTab(event, 'past')">往期公告</button>
         </div>
         <div id="current" class="tabcontent">
-            <p>重交杯#3：燃梦行动赛事组通讯#3</p>
+            <p>重交杯#3：燃梦行动赛事组通讯#4</p>
             <br>
-            <p>1）更新部分页面的语言表述错误</p>
-            <p>2）合约词条得分提升 （25分/级->50分/级）</p>
-            <p>3）Bingo得分提升 （20分/划去干员->50分/划去干员；50分/次->100分/次）</p>
-            <p>4）对部分规则进行补充阐释，变更内容如下：</p>
-            <p>Ⅰ:删除超额取钱的罚分，更改为团队违规</p>
-            <p>Ⅱ:优化词条等级下限限制：合约等级不得低于18 -> 团队词条不得低于10，个人词条不得低于8</p>
-            <p>Ⅲ:新增重开规则：在“拥挤年代”下，遭遇“卫士不语功”“奉献”关卡时，可无条件进行重开。</p>
-            <p>Ⅳ:新增得分项：卫士不语功/奉献（拥挤年代）&emsp;&emsp;200分</p>
-            <p>Ⅴ:优化积分赋分规则</p>
-            <p>5）部分合约词条更新，优化团队词条显示</p>
+            <p>积分奖励追加</p>
+            <p>追加规则1：团队赛总分前1/2/3名，分别追加积分总分5/3/1分</p>
+            <p>追加规则2：bingo板全部完成的队伍总分+5分，总bingo数前三的队伍除总分奖励外，总积分额外增加5/3/1分（两者不叠加）</p>
             <br>
-            <p>2024年9月19日</p>
+            <p>2024年10月8日</p>
             <p>重交杯赛事组</p>
         </div>
 
         <div id="past" class="tabcontent">
+            <button
+                onclick="redirectToNewPage4()">重交杯#3：燃梦行动赛事组通讯#4&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2024年10月8日</button><br>
             <button
                 onclick="redirectToNewPage3()">重交杯#3：燃梦行动赛事组通讯#3&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2024年9月19日</button><br>
             <button
@@ -144,6 +139,10 @@
                 evt.currentTarget.classList.add("active");
             }
 
+            function redirectToNewPage4() {
+                window.location.href = 'https://longxuanyue.github.io/CJB/past/%E5%BE%80%E6%9C%9F%E5%85%AC%E5%91%8A4';
+            }
+
             function redirectToNewPage3() {
                 window.location.href = 'https://longxuanyue.github.io/CJB/past/%E5%BE%80%E6%9C%9F%E5%85%AC%E5%91%8A3';
             }
@@ -155,7 +154,7 @@
             function redirectToNewPage1() {
                 window.location.href = 'https://longxuanyue.github.io/CJB/past/%E5%BE%80%E6%9C%9F%E5%85%AC%E5%91%8A1';
             }
-            
+
         </script>
     </main>
 </body>
