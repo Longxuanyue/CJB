@@ -88,20 +88,10 @@
     </ul>
     <main>
         <div style="padding:20px;margin-top:30px;">
-            <img class="bottom-image" src="https://raw.githubusercontent.com/Longxuanyue/CJB/main/img/bkg7.png" alt=""
-                width="100%">
-            <h1>赛事最新进展</h1>
-            <p>当前阶段：休赛期</p>
-            <p>当期主题：危机合约#3：燃梦行动</p>
-            <p>正式开赛日期：2024年10月1日 16：00：00</p>
-            <p>比赛时间：2024年10月1日----2024年10月31日</p>
-            <p>赛事官方群聊：958325995</p>
+            <img class="bottom-image" src="https://raw.githubusercontent.com/Longxuanyue/CJB/main/img/bkg7.png"
+                alt="" width="100%">
         </div>
         <h1>赛事组公告</h1>
-        <div class="tab">
-            <button class="tablink" onclick="openTab(event, 'current')">当前公告</button>
-            <button class="tablink" onclick="openTab(event, 'past')">往期公告</button>
-        </div>
         <div id="current" class="tabcontent">
             <p>重交杯#3：燃梦行动赛事组通讯#5</p>
             <br>
@@ -122,56 +112,11 @@
             <p>2024年10月20日</p>
             <p>重交杯赛事组</p>
         </div>
-
-        <div id="past" class="tabcontent">
-            <button
-                onclick="redirectToNewPage5()">重交杯#3：燃梦行动赛事组通讯#5&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2024年10月20日</button><br>
-            <button
-                onclick="redirectToNewPage4()">重交杯#3：燃梦行动赛事组通讯#4&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2024年10月8日</button><br>
-            <button
-                onclick="redirectToNewPage3()">重交杯#3：燃梦行动赛事组通讯#3&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2024年9月19日</button><br>
-            <button
-                onclick="redirectToNewPage2()">重交杯#3：燃梦行动赛事组通讯#2&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2024年9月15日</a></button><br>
-            <button
-                onclick="redirectToNewPage1()">重交杯#3：燃梦行动赛事组通讯#1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2024年9月9日</a></button>
-        </div>
-
+        <button onclick="redirectToNewPage()">返回</button>
         <script>
-            function openTab(evt, tabName) {
-                var i, tabcontent, tablinks;
-                tabcontent = document.getElementsByClassName("tabcontent");
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
-                }
-                tablinks = document.getElementsByClassName("tablink");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].classList.remove("active");
-                }
-                document.getElementById(tabName).style.display = "block";
-                evt.currentTarget.classList.add("active");
+            function redirectToNewPage() {
+                window.location.href = 'https://longxuanyue.github.io/CJB/CJB-3/%E7%AC%AC%E4%B8%89%E5%B1%8A%E9%87%8D%E4%BA%A4%E6%9D%AF'; // 将此URL替换为您要跳转的新页面的URL
             }
-
-
-            function redirectToNewPage5() {
-                window.location.href = 'https://longxuanyue.github.io/CJB/past/%E5%BE%80%E6%9C%9F%E5%85%AC%E5%91%8A5';
-            }
-
-            function redirectToNewPage4() {
-                window.location.href = 'https://longxuanyue.github.io/CJB/past/%E5%BE%80%E6%9C%9F%E5%85%AC%E5%91%8A4';
-            }
-
-            function redirectToNewPage3() {
-                window.location.href = 'https://longxuanyue.github.io/CJB/past/%E5%BE%80%E6%9C%9F%E5%85%AC%E5%91%8A3';
-            }
-
-            function redirectToNewPage2() {
-                window.location.href = 'https://longxuanyue.github.io/CJB/past/%E5%BE%80%E6%9C%9F%E5%85%AC%E5%91%8A2';
-            }
-
-            function redirectToNewPage1() {
-                window.location.href = 'https://longxuanyue.github.io/CJB/past/%E5%BE%80%E6%9C%9F%E5%85%AC%E5%91%8A1';
-            }
-
         </script>
     </main>
 </body>
