@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>重交杯官网</title>
+
+<head>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: grey;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: blueviolet;
+        }
+
+        .bottom-image {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a class="active" href="https://longxuanyue.github.io/CJB/CJB-4/第三届重交杯">当期赛事主页</a></li>
+        <li><a href="https://longxuanyue.github.io/CJB/CJB-4/赛事规则">赛事规则</a></li>
+        <li style="float:right"><a href="https://longxuanyue.github.io/CJB/">返回</a></li>
+    </ul>
+    <main>
+            <h1>赛事最新进展</h1>
+            <p>当前阶段：备赛期</p>
+            <p>当期主题：危机合约#4：纷争行动</p>
+            <p>正式开赛日期：2025年11月1日 14：00：00</p>
+            <p>比赛时间：待定</p>
+            <p>赛事官方群聊：958325995</p>
+        </div>
+        <h1>赛事组公告</h1>
+        <div class="tab">
+            <button class="tablink" onclick="openTab(event, 'current')">当前公告</button>
+            <button class="tablink" onclick="openTab(event, 'past')">往期公告</button>
+        </div>
+        <div id="announcement1" class="announcement-content">
+            <p>幕布已然升起，登台的却不止一位主角。</p>            
+            <p>深蓝在呼唤，猩红在低语，风雪在呼啸，熔炉在燃烧，器伥在邀约。</p>            
+            <p>不同的命运于此交织，碰撞出纷争的裂响。</p>            
+            <p>过去并非唯一，未来亦未注定。</p>            
+            <p>当所有的故事在此交汇，</p>            
+            <p>你，将选择为谁而战？</p>            
+            <p>是守护一段失落的叙事？</p>            
+            <p>还是谱写一曲崭新的乐章？</p>            
+            <p>纷争已启，我们，即是天灾。</p>            
+            <p>在这思维的战场上，</p>            
+            <p>唯有最锐利的策略与最默契的协作，</p>            
+            <p>方能裁定，</p>            
+            <p>最终的结局。</p>
+            <br>
+            <p>重交杯#4：纷争行动现已开启报名与筹备，欢迎各位选手踊跃参与！</p>
+            <p>2025年9月16日</p>
+            <p>重交杯赛事组</p>
+        </div>
+
+        <div id="past" class="tabcontent">
+            <button
+                onclick="redirectToNewPage1()">重交杯#4：纷争行动赛事组通讯#1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2025年9月16日</a></button>
+        </div>
+
+        <script>
+            function openTab(evt, tabName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].classList.remove("active");
+                }
+                document.getElementById(tabName).style.display = "block";
+                evt.currentTarget.classList.add("active");
+            }
+
+            function redirectToNewPage1() {
+                window.location.href = 'https://longxuanyue.github.io/CJB/past/%E5%BE%80%E6%9C%9F%E5%85%AC%E5%91%8A6';
+            }
+
+        </script>
+    </main>
+</body>
+
+</html>
