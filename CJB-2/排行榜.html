@@ -1,76 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <meta charset="utf-8">
 <title>重交杯官网</title>
 
 <head>
-    <style>
-        ul {
-            list-style-type: none;
-            /*去掉默认的列表样式*/
-            margin: 0;
-            /*去掉默认的列表外边距*/
-            padding: 0;
-            /* 去掉默认的列表内边距*/
-            overflow: hidden;
-            /* 溢出部分隐藏*/
-            background-color: grey;
-            /* 背景颜色*/
-            position: fixed;
-            /* 绝对定位*/
-            top: 0;
-            /* 距离顶部*/
-            width: 100%;
-            /* 宽度*/
-        }
-
-        li {
-            float: left;
-            /*  浮动*/
-        }
-
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover:not(.active) {
-            background-color: #111;
-        }
-
-        .active {
-            background-color: blueviolet;
-        }
-
-        th {
-            text-align: center;
-            background-color: blueviolet;
-            color: white;
-        }
-
-        td {
-            text-align: center;
-        }
-
-        table {
-            border-collapse: collapse;
-            /* 合并单元格边框 */
-        }
-
-        th,
-        td {
-            border: 1px solid #00CCCC;
-            text-align: center;
-        }
-
-        #ddd td {
-            background-color: #cc00a3;
-            color: white;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
@@ -97,7 +32,7 @@
                     <th style="width:6%">通关难度</th>
                     <th style="width:6%">得分</th>
                 </tr>
-                <tr id="ddd">
+                <tr class="rank-top">
                     <td>1</td>
                     <td>永恒狩猎者分队</td>
                     <td>实名制</td>
@@ -107,7 +42,7 @@
                     <td>15</td>
                     <td>12185</td>
                 </tr>
-                <tr id="ddd">
+                <tr class="rank-top">
                     <td>2</td>
                     <td>死人走路小队</td>
                     <td>这个凯尔希就是逊啊</td>
